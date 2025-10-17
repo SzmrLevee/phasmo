@@ -41,6 +41,13 @@ body {
   color: white;
 }
 
+/* crossed/excluded evidence visual */
+.custom-checkbox.crossed {
+  background: #ef4444; /* red-500 */
+  color: white;
+  border-color: rgba(248,113,113,0.6);
+}
+
 /* mobile tweaks */
 @media (max-width: 640px) {
   body { padding-bottom: 40px; }

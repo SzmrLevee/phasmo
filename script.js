@@ -1,5 +1,6 @@
 let ghosts = [];
 let evidences = new Set();
+let excludedEvidences = new Set();
 let traits = new Set();
 let excludedGhostNames = new Set(); // names of ghosts manually excluded (strike-through, not removed from data)
 
@@ -18,9 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     // Clear evidences
     evidences.clear();
-    document.querySelectorAll('#evidenceList input[type="checkbox"]').forEach(cb => cb.checked = false);
-    // also clear the visual state of custom checkboxes
-    document.querySelectorAll('#evidenceList .custom-checkbox').forEach(el => { el.classList.remove('bg-blue-500','border-blue-400'); });
+    excludedEvidences.clear();
+    // reset visual boxes' dataset and classes
+    document.querySelectorAll('#evidenceList .custom-checkbox').forEach(el => {
+      el.dataset.state = 'neutral';
+      el.classList.remove('bg-blue-500','border-blue-400','crossed','bg-red-600','border-red-400');
+      el.textContent = '';
+    });
     
     // Clear traits
     traits.clear();
@@ -106,10 +111,50 @@ function renderEvidenceOptions() {
       `;
       const inputEl = label.querySelector('input');
       const box = label.querySelector('.custom-checkbox');
-      // sync visual on change
-      inputEl.addEventListener('change', function() { box.classList.toggle('bg-blue-500', this.checked); box.classList.toggle('border-blue-400', this.checked); toggleEvidence(this); });
-      // clicking the visible box toggles the hidden input
-      box.addEventListener('click', () => { inputEl.checked = !inputEl.checked; inputEl.dispatchEvent(new Event('change')); });
+      // implement 3-state cycle for evidence: neutral -> include -> exclude -> neutral
+      // store state on the box element via dataset.state
+      function setEvidenceState(state) {
+        box.dataset.state = state;
+        box.classList.remove('bg-blue-500','border-blue-400','crossed','bg-red-600','border-red-400');
+        box.textContent = '';
+        // update sets
+        if (state === 'include') {
+          evidences.add(ev);
+          excludedEvidences.delete(ev);
+          box.classList.add('bg-blue-500','border-blue-400');
+          box.textContent = '✓';
+        } else if (state === 'exclude') {
+          excludedEvidences.add(ev);
+          evidences.delete(ev);
+          box.classList.add('crossed','bg-red-600','border-red-400');
+          box.textContent = '×';
+        } else {
+          // neutral
+          evidences.delete(ev);
+          excludedEvidences.delete(ev);
+        }
+        filterGhosts();
+      }
+
+      // Initialize neutral
+      setEvidenceState('neutral');
+
+      // clicking the visible box cycles state
+      box.addEventListener('click', () => {
+        const cur = box.dataset.state || 'neutral';
+        const next = cur === 'neutral' ? 'include' : (cur === 'include' ? 'exclude' : 'neutral');
+        setEvidenceState(next);
+      });
+      // also allow clicking the whole label to cycle
+      label.addEventListener('click', (ev) => {
+        // avoid double-handling because box click also fires; ensure target isn't the hidden input
+        if (ev.target === inputEl) return;
+        // prevent the default checkbox behavior
+        ev.preventDefault();
+        const cur = box.dataset.state || 'neutral';
+        const next = cur === 'neutral' ? 'include' : (cur === 'include' ? 'exclude' : 'neutral');
+        setEvidenceState(next);
+      });
       container.appendChild(label);
     });
 }
@@ -156,8 +201,13 @@ function filterGhosts() {
   let filtered = ghosts.filter(g => {
     // Evidence filter
     const ghostEvidences = [g.Evidence1, g.Evidence2, g.Evidence3, g.ForcedEvidence].filter(e => e && e !== "None");
+    // include filter: all included evidences must be present
     for (const ev of evidences) {
       if (!ghostEvidences.includes(ev)) return false;
+    }
+    // exclude filter: none of the excluded evidences must be present on the ghost
+    for (const ex of excludedEvidences) {
+      if (ghostEvidences.includes(ex)) return false;
     }
 
     // Trait filter
