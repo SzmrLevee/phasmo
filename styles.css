@@ -1,0 +1,100 @@
+/* GENERAL STYLE */
+/* Minimal custom styles - Tailwind handles most styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Timer alert animation */
+.timer-alert {
+  color: #f87171 !important;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Smooth expand animation for ghost details */
+@keyframes expand {
+  from { opacity: 0; transform: scaleY(0.95); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+
+.details {
+  animation: expand 0.2s ease;
+}
+
+.tools h2 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.timer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.timer-section button {
+  background-color: #1e293b;
+  color: #e5e7eb;
+  border: 1px solid #3b82f6;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.timer-section button:hover {
+  background-color: #3b82f6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.timer-display {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #22d3ee;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.timer-alert {
+  color: #f87171 !important;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+
+.ai-helper {
+  margin-top: 30px;
+  background: #11151c;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.ai-helper h2 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.ai-advice {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

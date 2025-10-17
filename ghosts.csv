@@ -1,0 +1,24 @@
+Name,Evidence1,Evidence2,Evidence3,Speed,Aggressiveness,Special Traits,ForcedEvidence,HowToTest
+Spirit,EMF Level 5,Spirit Box,Ghost Writing,Normal,Medium,None,None,Light some smudge sticks near the ghost after an event Spirits will not hunt for about 3 minutes much longer than others.
+Wraith,EMF Level 5,Spirit Box,D.O.T.S,Fast,Aggressive,Can teleport to players,None,Place salt piles where it walks Wraiths step in salt but leave no UV footprints afterward.
+Phantom,Spirit Box,Fingerprints,D.O.T.S,Slow,Calm,Disappears when photo taken,None,Wait for a ghost manifestation then take a photo if it vanishes instantly it’s a Phantom.
+Poltergeist,Spirit Box,Fingerprints,Ghost Writing,Normal,Aggressive,Throws many objects,None,Place several small objects in one room Poltergeist will throw multiple items rapidly.
+Banshee,Fingerprints,Orbs,D.O.T.S,Normal,Medium,Targets one player,None,Use a parabolic mic during ghost activity listen for a unique long scream sound.
+Jinn,EMF Level 5,Fingerprints,Freezing Temps,Fast,Medium,Faster with power on,None,Turn the breaker off then on again Jinns move much faster when the power is on.
+Mare,Spirit Box,Orbs,Ghost Writing,Normal,Medium,More active in dark,None,Keep the lights on Mares prefer darkness and will turn lights off or hunt more when it’s dark.
+Revenant,Orbs,Ghost Writing,Freezing Temps,Slow→Fast,Aggressive,Extremely fast during hunts if chasing,None,Hide during a hunt if it sees you it suddenly speeds up dramatically.
+Shade,EMF Level 5,Ghost Writing,Freezing Temps,Normal,Calm,Less active when players nearby,None,Stay together with teammates Shades rarely manifest or hunt with multiple players close.
+Demon,Fingerprints,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Hunts more often,None,Use a crucifix Demons can ignore the normal cooldown and hunt again very quickly.
+Yurei,Orbs,Freezing Temps,D.O.T.S,Normal,Medium,Drains sanity faster,None,Close a door and smudge the room Yurei will stop sanity drain temporarily and may slam doors shut.
+Oni,EMF Level 5,Freezing Temps,D.O.T.S,Fast,Aggressive,More visible during hunts,None,Watch its manifestations Onis appear more clearly and throw items with extra force.
+Hantu,Fingerprints,Orbs,Freezing Temps,Variable,Medium,Faster in cold areas,None,Turn on the breaker and warm up the house compare its hunt speed in cold vs warm rooms.
+Goryo,EMF Level 5,Fingerprints,D.O.T.S,Normal,Medium,Only visible through camera,None,Set up a video camera on D.O.T.S if you only see it through the feed (not with eyes) it’s a Goryo.
+Myling,EMF Level 5,Fingerprints,Ghost Writing,Normal,Medium,Quieter during hunts,None,During a hunt, listen closely  footsteps and vocal sounds are much quieter for Myling.
+Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place 3 candles near the ghost  after the third candle is blown out prepare for a hunt.
+The Twins,EMF Level 5,Spirit Box,Freezing Temps,Fast+Slow,Aggressive,Two entities act separately,None,Check EMF in different rooms activity or EMF in two spots at once hints it’s The Twins.
+Raiju,EMF Level 5,Orbs,D.O.T.S,Fast,Medium,Faster near electronics,None,Turn off electronics before a hunt if it slows down with devices off it’s likely a Raiju.
+Obake,EMF Level 5,Fingerprints,Orbs,Normal,Medium,Unique fingerprint patterns,Fingerprints,Use UV light on doors and switches Obake sometimes leaves six-fingered prints.
+The Mimic,Spirit Box,Fingerprints,Freezing Temps,Variable,Variable,Always shows extra ghost orb,Ghost Orbs,Look for 4th evidence Mimics always show fake orbs along with their normal evidence.
+Moroi,Spirit Box,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Weakens with smudge,None,Use smudge during a hunt Moroi slows down temporarily after being smudged.
+Deogen,Spirit Box,Ghost Writing,D.O.T.S,Variable,Very Aggressive,Knows your location always,None,Hide during a hunt and listen you’ll hear heavy breathing as it approaches slowly but always knows where you are.
+Thaye,Orbs,Ghost Writing,D.O.T.S,Fast→Slow,Medium,Ages over time (less active),None,Stay in the ghost room for a long session activity and speed decrease noticeably over time.

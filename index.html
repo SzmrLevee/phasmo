@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhasmoHelper</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: { 900: '#0f1419', 800: '#1a1f2e', 700: '#252b3f' },
+            accent: { 500: '#60a5fa', 600: '#3b82f6', 700: '#2563eb' },
+            cyan: { 400: '#22d3ee', 500: '#06b6d4' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon.png">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-gray-200 font-['Poppins'] min-h-screen">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <!-- Header with Title & Reset -->
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">PhasmoHelper</h1>
+      <button id="resetBtn" class="px-6 py-2.5 bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white rounded-xl font-semibold shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-200">
+        Reset All
+      </button>
+    </div>
+
+    <!-- File Notice (hidden by default) -->
+    <div id="fileNotice" class="hidden bg-yellow-900/20 border border-yellow-600/30 rounded-xl p-4 mb-6">
+      <p class="text-yellow-200 font-medium mb-2">⚠️ Ghost data not accessible.</p>
+      <p class="text-sm text-yellow-300/80 mb-3">If you opened this file directly (file://) the browser may block fetching local files. Run a local web server or load the CSV manually:</p>
+      <label class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-500 text-white rounded-lg cursor-pointer transition">
+        <input id="csvFileInput" type="file" accept=".csv" class="hidden" />
+        <span>📁 Choose ghosts.csv</span>
+      </label>
+    </div>
+
+    <!-- Evidences -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-blue-400 mb-3">Evidences</h2>
+      <div id="evidenceList" class="flex flex-wrap gap-2"></div>
+    </section>
+
+    <!-- Traits -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-blue-400 mb-3">Traits</h2>
+      <div id="traitsList" class="flex flex-wrap gap-2"></div>
+    </section>
+
+    <!-- Ghost Results with Counts -->
+    <section class="mb-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-blue-400">Possible Ghosts</h2>
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full font-medium border border-blue-500/30">
+            Filtered: <span id="filteredCount">0</span>
+          </span>
+          <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full font-medium border border-red-500/30">
+            Excluded: <span id="excludedCount">0</span>
+          </span>
+        </div>
+      </div>
+      <div id="ghostList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- AI Helper -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-blue-400 mb-3">Helper</h2>
+      <div id="aiAdvice" class="bg-slate-800/60 backdrop-blur border border-blue-500/20 rounded-xl p-5 text-gray-300 leading-relaxed shadow-lg">
+        Select two evidences to get tailored testing advice.
+      </div>
+    </section>
+
+    <!-- Ghost Testing Tools -->
+    <section class="bg-slate-800/60 backdrop-blur border border-blue-500/20 rounded-xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold text-blue-400 mb-4 text-center">Ghost Testing Tools</h2>
+      <div class="flex flex-col items-center gap-3">
+        <button onclick="startTimer('smudge')" class="w-64 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200">
+          Start Smudge Timer<br><span class="text-sm font-normal">(3 min)</span>
+        </button>
+        <button onclick="startTimer('crucifix')" class="w-64 px-5 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white rounded-lg font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-200">
+          Start Crucifix Timer<br><span class="text-sm font-normal">(1 min)</span>
+        </button>
+        <button onclick="startTimer('demon')" class="w-64 px-5 py-3 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white rounded-lg font-semibold shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/50 hover:scale-105 transition-all duration-200">
+          Start Demon Timer<br><span class="text-sm font-normal">(20 sec)</span>
+        </button>
+        <button onclick="resetTimer()" class="w-64 px-5 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-all duration-200">
+          Reset Timer
+        </button>
+        <div id="timerDisplay" class="text-5xl font-bold text-cyan-400 mt-2 tracking-wider drop-shadow-lg">00:00</div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
