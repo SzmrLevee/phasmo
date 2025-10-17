@@ -19,10 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Clear evidences
     evidences.clear();
     document.querySelectorAll('#evidenceList input[type="checkbox"]').forEach(cb => cb.checked = false);
+    // also clear the visual state of custom checkboxes
+    document.querySelectorAll('#evidenceList .custom-checkbox').forEach(el => { el.classList.remove('bg-blue-500','border-blue-400'); });
     
     // Clear traits
     traits.clear();
     document.querySelectorAll('#traitsList input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.querySelectorAll('#traitsList .custom-checkbox').forEach(el => { el.classList.remove('bg-blue-500','border-blue-400'); });
     
     // Reset timer
     resetTimer();
@@ -135,12 +138,17 @@ function renderTraitOptions() {
 function toggleEvidence(checkbox) {
   if (checkbox.checked) evidences.add(checkbox.value);
   else evidences.delete(checkbox.value);
+  // sync visual
+  const box = checkbox.parentElement.querySelector('.custom-checkbox');
+  if (box) box.classList.toggle('bg-blue-500', checkbox.checked);
   filterGhosts();
 }
 
 function toggleTrait(checkbox) {
   if (checkbox.checked) traits.add(checkbox.value);
   else traits.delete(checkbox.value);
+  const box = checkbox.parentElement.querySelector('.custom-checkbox');
+  if (box) box.classList.toggle('bg-blue-500', checkbox.checked);
   filterGhosts();
 }
 
