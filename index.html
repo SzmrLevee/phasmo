@@ -25,9 +25,9 @@
 <body class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-gray-200 font-['Poppins'] min-h-screen">
   <div class="max-w-6xl mx-auto px-6 py-10">
     <!-- Header with Title & Reset -->
-    <div class="flex items-center justify-between mb-8">
-      <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">PhasmoHelper</h1>
-      <button id="resetBtn" class="px-6 py-2.5 bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white rounded-xl font-semibold shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-200">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+      <h1 class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">PhasmoHelper</h1>
+      <button id="resetBtn" class="w-full sm:w-auto px-6 py-2.5 bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white rounded-xl font-semibold shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-200">
         Reset All
       </button>
     </div>
@@ -81,17 +81,17 @@
     <!-- Ghost Testing Tools -->
     <section class="bg-slate-800/60 backdrop-blur border border-blue-500/20 rounded-xl p-6 shadow-lg">
       <h2 class="text-xl font-semibold text-blue-400 mb-4 text-center">Ghost Testing Tools</h2>
-      <div class="flex flex-col items-center gap-3">
-        <button onclick="startTimer('smudge')" class="w-64 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200">
+      <div class="flex flex-col items-center gap-3 w-full">
+        <button onclick="startTimer('smudge')" class="w-full sm:w-64 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200">
           Start Smudge Timer<br><span class="text-sm font-normal">(3 min)</span>
         </button>
-        <button onclick="startTimer('crucifix')" class="w-64 px-5 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white rounded-lg font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-200">
+        <button onclick="startTimer('crucifix')" class="w-full sm:w-64 px-5 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white rounded-lg font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-200">
           Start Crucifix Timer<br><span class="text-sm font-normal">(1 min)</span>
         </button>
-        <button onclick="startTimer('demon')" class="w-64 px-5 py-3 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white rounded-lg font-semibold shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/50 hover:scale-105 transition-all duration-200">
+        <button onclick="startTimer('demon')" class="w-full sm:w-64 px-5 py-3 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white rounded-lg font-semibold shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/50 hover:scale-105 transition-all duration-200">
           Start Demon Timer<br><span class="text-sm font-normal">(20 sec)</span>
         </button>
-        <button onclick="resetTimer()" class="w-64 px-5 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-all duration-200">
+        <button onclick="resetTimer()" class="w-full sm:w-64 px-5 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-all duration-200">
           Reset Timer
         </button>
         <div id="timerDisplay" class="text-5xl font-bold text-cyan-400 mt-2 tracking-wider drop-shadow-lg">00:00</div>

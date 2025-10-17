@@ -30,6 +30,23 @@ body {
   animation: expand 0.2s ease;
 }
 
+/* Custom checkbox visuals */
+.custom-checkbox {
+  border: 2px solid rgba(99,102,241,0.25); /* indigo-500/25 */
+  background: transparent;
+  transition: all .15s ease;
+}
+.custom-checkbox.bg-blue-500 {
+  background: #3b82f6;
+  color: white;
+}
+
+/* mobile tweaks */
+@media (max-width: 640px) {
+  body { padding-bottom: 40px; }
+  .max-w-6xl { padding-left: 16px; padding-right: 16px; }
+}
+
 .tools h2 {
   color: #60a5fa;
   margin-bottom: 10px;

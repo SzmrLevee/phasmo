@@ -94,9 +94,19 @@ function renderEvidenceOptions() {
     .sort()
     .forEach(ev => {
       const label = document.createElement("label");
-      label.className = "inline-flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-blue-600/30 border border-blue-500/30 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:border-blue-400/60";
-      label.innerHTML = `<input type="checkbox" value="${ev}" class="w-4 h-4 accent-blue-500 rounded"> <span class="text-sm font-medium">${ev}</span>`;
-      label.querySelector('input').addEventListener('change', function() { toggleEvidence(this); });
+      label.className = "inline-flex items-center gap-3 px-4 py-2 bg-slate-800/80 hover:bg-blue-600/30 border border-blue-500/30 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:border-blue-400/60";
+      // custom checkbox: hidden input + visual span
+      label.innerHTML = `
+        <input type="checkbox" value="${ev}" class="custom-checkbox-input hidden" />
+        <span class="custom-checkbox w-5 h-5 flex items-center justify-center rounded-md"></span>
+        <span class="text-sm font-medium">${ev}</span>
+      `;
+      const inputEl = label.querySelector('input');
+      const box = label.querySelector('.custom-checkbox');
+      // sync visual on change
+      inputEl.addEventListener('change', function() { box.classList.toggle('bg-blue-500', this.checked); box.classList.toggle('border-blue-400', this.checked); toggleEvidence(this); });
+      // clicking the visible box toggles the hidden input
+      box.addEventListener('click', () => { inputEl.checked = !inputEl.checked; inputEl.dispatchEvent(new Event('change')); });
       container.appendChild(label);
     });
 }
@@ -108,9 +118,16 @@ function renderTraitOptions() {
 
   traitOptions.forEach(t => {
     const label = document.createElement("label");
-    label.className = "inline-flex items-center gap-2 px-4 py-2 bg-slate-800/80 hover:bg-blue-600/30 border border-blue-500/30 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:border-blue-400/60";
-    label.innerHTML = `<input type="checkbox" value="${t}" class="w-4 h-4 accent-blue-500 rounded"> <span class="text-sm font-medium">${t}</span>`;
-    label.querySelector('input').addEventListener('change', function() { toggleTrait(this); });
+    label.className = "inline-flex items-center gap-3 px-4 py-2 bg-slate-800/80 hover:bg-blue-600/30 border border-blue-500/30 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:border-blue-400/60";
+    label.innerHTML = `
+      <input type="checkbox" value="${t}" class="custom-checkbox-input hidden" />
+      <span class="custom-checkbox w-5 h-5 flex items-center justify-center rounded-md"></span>
+      <span class="text-sm font-medium">${t}</span>
+    `;
+    const inputEl = label.querySelector('input');
+    const box = label.querySelector('.custom-checkbox');
+    inputEl.addEventListener('change', function() { box.classList.toggle('bg-blue-500', this.checked); box.classList.toggle('border-blue-400', this.checked); toggleTrait(this); });
+    box.addEventListener('click', () => { inputEl.checked = !inputEl.checked; inputEl.dispatchEvent(new Event('change')); });
     container.appendChild(label);
   });
 }
