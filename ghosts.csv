@@ -1,24 +1,24 @@
 Name,Evidence1,Evidence2,Evidence3,Speed,Aggressiveness,Special Traits,ForcedEvidence,HowToTest
-Spirit,EMF Level 5,Spirit Box,Ghost Writing,Normal,Medium,None,None,Light some smudge sticks near the ghost after an event Spirits will not hunt for about 3 minutes much longer than others.
-Wraith,EMF Level 5,Spirit Box,D.O.T.S,Fast,Aggressive,Can teleport to players,None,Place salt piles where it walks Wraiths step in salt but leave no UV footprints afterward.
-Phantom,Spirit Box,Fingerprints,D.O.T.S,Slow,Calm,Disappears when photo taken,None,Wait for a ghost manifestation then take a photo if it vanishes instantly it’s a Phantom.
-Poltergeist,Spirit Box,Fingerprints,Ghost Writing,Normal,Aggressive,Throws many objects,None,Place several small objects in one room Poltergeist will throw multiple items rapidly.
-Banshee,Fingerprints,Orbs,D.O.T.S,Normal,Medium,Targets one player,None,Use a parabolic mic during ghost activity listen for a unique long scream sound.
-Jinn,EMF Level 5,Fingerprints,Freezing Temps,Fast,Medium,Faster with power on,None,Turn the breaker off then on again Jinns move much faster when the power is on.
-Mare,Spirit Box,Orbs,Ghost Writing,Normal,Medium,More active in dark,None,Keep the lights on Mares prefer darkness and will turn lights off or hunt more when it’s dark.
-Revenant,Orbs,Ghost Writing,Freezing Temps,Slow→Fast,Aggressive,Extremely fast during hunts if chasing,None,Hide during a hunt if it sees you it suddenly speeds up dramatically.
-Shade,EMF Level 5,Ghost Writing,Freezing Temps,Normal,Calm,Less active when players nearby,None,Stay together with teammates Shades rarely manifest or hunt with multiple players close.
-Demon,Fingerprints,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Hunts more often,None,Use a crucifix Demons can ignore the normal cooldown and hunt again very quickly.
-Yurei,Orbs,Freezing Temps,D.O.T.S,Normal,Medium,Drains sanity faster,None,Close a door and smudge the room Yurei will stop sanity drain temporarily and may slam doors shut.
-Oni,EMF Level 5,Freezing Temps,D.O.T.S,Fast,Aggressive,More visible during hunts,None,Watch its manifestations Onis appear more clearly and throw items with extra force.
-Hantu,Fingerprints,Orbs,Freezing Temps,Variable,Medium,Faster in cold areas,None,Turn on the breaker and warm up the house compare its hunt speed in cold vs warm rooms.
-Goryo,EMF Level 5,Fingerprints,D.O.T.S,Normal,Medium,Only visible through camera,None,Set up a video camera on D.O.T.S if you only see it through the feed (not with eyes) it’s a Goryo.
-Myling,EMF Level 5,Fingerprints,Ghost Writing,Normal,Medium,Quieter during hunts,None,During a hunt, listen closely  footsteps and vocal sounds are much quieter for Myling.
-Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place 3 candles near the ghost  after the third candle is blown out prepare for a hunt.
-The Twins,EMF Level 5,Spirit Box,Freezing Temps,Fast+Slow,Aggressive,Two entities act separately,None,Check EMF in different rooms activity or EMF in two spots at once hints it’s The Twins.
-Raiju,EMF Level 5,Orbs,D.O.T.S,Fast,Medium,Faster near electronics,None,Turn off electronics before a hunt if it slows down with devices off it’s likely a Raiju.
-Obake,EMF Level 5,Fingerprints,Orbs,Normal,Medium,Unique fingerprint patterns,Fingerprints,Use UV light on doors and switches Obake sometimes leaves six-fingered prints.
-The Mimic,Spirit Box,Fingerprints,Freezing Temps,Variable,Variable,Always shows extra ghost orb,Ghost Orbs,Look for 4th evidence Mimics always show fake orbs along with their normal evidence.
-Moroi,Spirit Box,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Weakens with smudge,None,Use smudge during a hunt Moroi slows down temporarily after being smudged.
-Deogen,Spirit Box,Ghost Writing,D.O.T.S,Variable,Very Aggressive,Knows your location always,None,Hide during a hunt and listen you’ll hear heavy breathing as it approaches slowly but always knows where you are.
-Thaye,Orbs,Ghost Writing,D.O.T.S,Fast→Slow,Medium,Ages over time (less active),None,Stay in the ghost room for a long session activity and speed decrease noticeably over time.
+Spirit,EMF Level 5,Spirit Box,Ghost Writing,Normal,Medium,None,None,Light smudge sticks near the ghost after an event Spirits will not hunt for about three minutes much longer than others
+Wraith,EMF Level 5,Spirit Box,D.O.T.S,Fast,Aggressive,Can teleport to players,None,Place salt piles where it walks Wraiths step in salt but leave no UV footprints afterward
+Phantom,Spirit Box,Fingerprints,D.O.T.S,Slow,Calm,Disappears when photo taken,None,Take a photo during a ghost manifestation if it vanishes instantly it is a Phantom
+Poltergeist,Spirit Box,Fingerprints,Ghost Writing,Normal,Aggressive,Throws many objects,None,Place several small objects in one room Poltergeist will throw multiple items rapidly or together
+Banshee,Fingerprints,Orbs,D.O.T.S,Normal,Medium,Targets one player,None,Use a parabolic mic during ghost activity if you hear a unique long scream sound it is a Banshee
+Jinn,EMF Level 5,Fingerprints,Freezing Temps,Fast,Medium,Faster with power on,None,Turn the breaker off then on again Jinns move much faster when power is on and the player is far away
+Mare,Spirit Box,Orbs,Ghost Writing,Normal,Medium,More active in dark,None,Keep the lights on Mares prefer darkness and will often turn lights off or hunt earlier in the dark
+Revenant,Orbs,Ghost Writing,Freezing Temps,Slow→Fast,Aggressive,Extremely fast during hunts if chasing,None,Hide during a hunt if it sees you it speeds up rapidly if it loses sight it slows down dramatically
+Shade,EMF Level 5,Ghost Writing,Freezing Temps,Normal,Calm,Less active when players nearby,None,Stay close to teammates Shades rarely manifest or hunt when multiple players are near
+Demon,Fingerprints,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Hunts more often,None,If the ghost hunts very early or repeatedly despite high sanity it is a Demon
+Yurei,Orbs,Freezing Temps,D.O.T.S,Normal,Medium,Drains sanity faster,None,Observe sanity drop and door movements if doors slam during events and sanity drains quickly it is a Yurei
+Oni,EMF Level 5,Freezing Temps,D.O.T.S,Fast,Aggressive,More visible during hunts,None,Watch ghost events if it appears visibly longer and throws objects with strong force it is an Oni
+Hantu,Fingerprints,Orbs,Freezing Temps,Variable,Medium,Faster in cold areas,None,Turn off the breaker and watch hunt speed if it moves faster in cold areas it is a Hantu
+Goryo,EMF Level 5,Fingerprints,D.O.T.S,Normal,Medium,Only visible through camera,None,Set up a D O T S camera if you see it only on camera feed and not in person it is a Goryo
+Myling,EMF Level 5,Fingerprints,Ghost Writing,Normal,Medium,Quieter during hunts,None,During a hunt listen for footsteps if they are very quiet until it is near it is a Myling
+Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place candles near you when one goes out and a hunt starts immediately it is an Onryo
+The Twins,EMF Level 5,Spirit Box,Freezing Temps,Fast+Slow,Aggressive,Two entities act separately,None,Monitor activity in two areas if interactions happen far apart it is The Twins
+Raiju,EMF Level 5,Orbs,D.O.T.S,Fast,Medium,Faster near electronics,None,Turn off electronics during a hunt if the ghost slows down when devices are off it is a Raiju
+Obake,EMF Level 5,Fingerprints,Orbs,Normal,Medium,Unique fingerprint patterns,Fingerprints,Check fingerprints over time if they fade fast or show six fingers it is an Obake
+The Mimic,Spirit Box,Fingerprints,Freezing Temps,Variable,Variable,Always shows extra ghost orb,Ghost Orbs,If the ghost behavior changes often and there are ghost orbs even without orb evidence it is a Mimic
+Moroi,Spirit Box,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Weakens with smudge,None,After using spirit box note faster hunts as sanity lowers and slower speed after smudging it is a Moroi
+Deogen,Spirit Box,Ghost Writing,D.O.T.S,Variable,Very Aggressive,Knows your location always,None,Hide and listen during a hunt if it breathes heavily and approaches slowly while always knowing your location it is a Deogen
+Thaye,Orbs,Ghost Writing,D.O.T.S,Fast→Slow,Medium,Ages over time (less active),None,Stay long in the ghost room if activity and speed gradually weaken over time it is a Thaye
