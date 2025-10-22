@@ -14,7 +14,7 @@ Oni,EMF Level 5,Freezing Temps,D.O.T.S,Fast,Aggressive,More visible during hunts
 Hantu,Fingerprints,Orbs,Freezing Temps,Variable,Medium,Faster in cold areas,None,Turn off the breaker and watch hunt speed if it moves faster in cold areas it is a Hantu
 Goryo,EMF Level 5,Fingerprints,D.O.T.S,Normal,Medium,Only visible through camera,None,Set up a D O T S camera if you see it only on camera feed and not in person it is a Goryo
 Myling,EMF Level 5,Fingerprints,Ghost Writing,Normal,Medium,Quieter during hunts,None,During a hunt listen for footsteps if they are very quiet until it is near it is a Myling
-Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place candles near you when one goes out and a hunt starts immediately it is an Onryo
+Onryo,Spirit Box,Orbs,Freezing Temps,Normal,Aggressive,Hunts triggered by candles,None,Place 3 candles near you when the third one goes out and a hunt starts immediately it is an Onryo
 The Twins,EMF Level 5,Spirit Box,Freezing Temps,Fast+Slow,Aggressive,Two entities act separately,None,Monitor activity in two areas if interactions happen far apart it is The Twins
 Raiju,EMF Level 5,Orbs,D.O.T.S,Fast,Medium,Faster near electronics,None,Turn off electronics during a hunt if the ghost slows down when devices are off it is a Raiju
 Obake,EMF Level 5,Fingerprints,Orbs,Normal,Medium,Unique fingerprint patterns,Fingerprints,Check fingerprints over time if they fade fast or show six fingers it is an Obake
@@ -22,3 +22,4 @@ The Mimic,Spirit Box,Fingerprints,Freezing Temps,Variable,Variable,Always shows 
 Moroi,Spirit Box,Ghost Writing,Freezing Temps,Fast,Very Aggressive,Weakens with smudge,None,After using spirit box note faster hunts as sanity lowers and slower speed after smudging it is a Moroi
 Deogen,Spirit Box,Ghost Writing,D.O.T.S,Variable,Very Aggressive,Knows your location always,None,Hide and listen during a hunt if it breathes heavily and approaches slowly while always knowing your location it is a Deogen
 Thaye,Orbs,Ghost Writing,D.O.T.S,Fast→Slow,Medium,Ages over time (less active),None,Stay long in the ghost room if activity and speed gradually weaken over time it is a Thaye
+
